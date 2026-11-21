@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Incident Response Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Security Incident Response Dashboard</h1>
+    <span>DEMO MODE</span>
+</header>
+
+<div class="container">
+    <h2>Security Overview</h2>
+    <p>Monitor and manage security incidents.</p>
+
+    <div class="stats">
+        <div class="card">
+            <h3>Total Incidents</h3>
+            <h2 id="total">0</h2>
+        </div>
+        <div class="card">
+            <h3>Critical</h3>
+            <h2 id="critical">0</h2>
+        </div>
+        <div class="card">
+            <h3>High</h3>
+            <h2 id="high">0</h2>
+        </div>
+        <div class="card">
+            <h3>Contained</h3>
+            <h2 id="contained">0</h2>
+        </div>
+    </div>
+
+    <button onclick="addIncident()">Simulate Incident</button>
+
+    <h2>Incident Activity</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Incident</th>
+                <th>Source</th>
+                <th>Severity</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="incidentTable"></tbody>
+    </table>
+
+    <h2>Automated Response Log</h2>
+    <ul id="logs"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
